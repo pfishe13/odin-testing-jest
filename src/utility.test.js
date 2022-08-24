@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from './utility';
+import { capitalize, reverseString, calculator, analyzeArray } from './utility';
 
 // Capitilize
 it('First letter is capitilized', () => {
@@ -55,17 +55,12 @@ it('Divide negative and positive with calculator', () => {
   expect(calculator.divide(-4, 2)).toBe(-2);
 });
 
-// // caesarCipher
-
-// // analyzeArray
-// it('Return object of numbers', () => {
-//   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toBe(
-//     object ==
-//       {
-//         average: 4,
-//         min: 1,
-//         max: 8,
-//         length: 6,
-//       }
-//   );
-// });
+// analyzeArray
+it('Return object of numbers', () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toMatchObject({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});

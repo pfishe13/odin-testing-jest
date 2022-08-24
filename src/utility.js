@@ -59,5 +59,28 @@ const calculator = {
   divide,
 };
 
-export { capitalize, reverseString, calculator };
+// Analyze Array
+const analyzeArray = (array) => {
+  let sum = 0;
+  let count = 0;
+  for (let element of array) {
+    sum += element;
+    count += 1;
+  }
+  let average = sum / count;
+
+  array.sort();
+  let min = array[0];
+  let max = array[array.length - 1];
+  let length = array.length;
+
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
+};
+
+export { capitalize, reverseString, calculator, analyzeArray };
 // module.exports = capString;
